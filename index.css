@@ -42,7 +42,7 @@ body {
 
 nav{
     position: absolute;
-    padding: 2rem 2rem;
+    padding: clamp(2rem,6vw,5rem);
     width: 100%;
     display:flex;
     justify-content: space-between;
@@ -107,6 +107,7 @@ max-width: 100%;
 }
 header picture img{
     position: relative;
+    filter: brightness(80%);
 }
 
 header h1 {
@@ -185,13 +186,13 @@ h2 {
     grid-template-columns: repeat(4,1fr);
     gap: 1rem;
 }
-    .gallery picture{
+    .gallery >div{
         position: relative;
     }
     .gallery picture img {
         filter: brightness(80%);
     }
-    .gallery picture h3 {
+    .gallery >div h3 {
         position: absolute;
         bottom: 0;
         padding: 2rem;
@@ -253,6 +254,9 @@ footer {
     }
     .nav-links {
         display: none;
+    }
+    nav {
+        padding: 2rem;
     }
     nav[aria-expanded= "true"] {
         background-color: black;
